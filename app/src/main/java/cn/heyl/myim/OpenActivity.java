@@ -34,6 +34,7 @@ public class OpenActivity extends AppCompatActivity {
                     case 1:intent=new Intent(OpenActivity.this,SVActivity.class);break;
                     case 2:intent=new Intent(OpenActivity.this,DownMentActivity.class);break;
                     case 3:intent=new Intent(OpenActivity.this,OBSrcollviewActivity.class);break;
+                    case 4:intent=new Intent(OpenActivity.this,OBSV2Activity.class);break;
                 }
                 startActivity(intent);
             }
@@ -45,6 +46,7 @@ public class OpenActivity extends AppCompatActivity {
         list.add("广告轮播");
         list.add("引导滑动");
         list.add("下拉筛选");
+        list.add("标题图片拉隐藏");
         list.add("标题栏下拉隐藏");
 
     }

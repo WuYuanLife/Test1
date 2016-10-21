@@ -18,12 +18,17 @@
         </activity>
         <activity android:name=".SVActivity" />
         <activity android:name=".DownMentActivity" />
-        <activity android:name=".OBSrcollviewActivity"
-            android:theme="@style/AppTheme.Toolbar"></activity><!-- ATTENTION: This was auto-generated to add Google Play services to your project for
-     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
-        <!--<meta-data-->
-            <!--android:name="com.google.android.gms.version"-->
-            <!--android:value="@integer/google_play_services_version" />-->
+        <activity
+            android:name=".OBSrcollviewActivity"
+            android:theme="@style/AppTheme.Toolbar" />
+        <!--
+ ATTENTION: This was auto-generated to add Google Play services to your project for
+     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
+        -->
+        <!-- <meta-data -->
+        <!-- android:name="com.google.android.gms.version" -->
+        <!-- android:value="@integer/google_play_services_version" /> -->
+        <activity android:name=".OBSV2Activity" android:theme="@style/Base.Theme.AppCompat"></activity>
     </application>
 
 </manifest>

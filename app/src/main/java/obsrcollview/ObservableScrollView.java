@@ -195,6 +195,21 @@ public class ObservableScrollView extends ScrollView implements Scrollable {
     }
 
     @Override
+    public void addScrollViewCallbacks(ObservableScrollViewCallbacks listener) {
+
+    }
+
+    @Override
+    public void removeScrollViewCallbacks(ObservableScrollViewCallbacks listener) {
+
+    }
+
+    @Override
+    public void clearScrollViewCallbacks() {
+
+    }
+
+    @Override
     public void setTouchInterceptionViewGroup(ViewGroup viewGroup) {
         mTouchInterceptionViewGroup = viewGroup;
     }
