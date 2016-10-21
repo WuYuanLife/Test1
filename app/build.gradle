@@ -29,4 +29,6 @@ dependencies {
     compile 'com.daimajia.slider:library:1.1.5'
     compile 'com.github.dongjunkun:DropDownMenu:1.0.3'
     compile 'com.jakewharton:butterknife:6.1.0'
+
+    compile 'com.google.android.gms:play-services-appindexing:8.1.0'
 }
