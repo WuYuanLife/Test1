@@ -9,8 +9,8 @@ import android.widget.TextView;
 
 import java.util.List;
 
+import butterknife.Bind;
 import butterknife.ButterKnife;
-import butterknife.InjectView;
 
 
 public class ListDropDownAdapter extends BaseAdapter {
@@ -72,11 +72,11 @@ public class ListDropDownAdapter extends BaseAdapter {
     }
 
     static class ViewHolder {
-        @InjectView(R.id.text)
+        @Bind(R.id.text)
         TextView mText;
 
         ViewHolder(View view) {
-            ButterKnife.inject(this, view);
+            ButterKnife.bind(this, view);
         }
     }
 }
