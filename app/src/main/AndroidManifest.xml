@@ -2,16 +2,19 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="cn.heyl.myim">
 
+    <!-- 相机权限 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.Toolbar">
-
-
-
-
         <activity android:name=".MainActivity" />
         <activity android:name=".OpenActivity">
             <intent-filter>
@@ -40,13 +43,13 @@
             android:name=".OBSV3Activity"
             android:theme="@style/AppTheme.Toolbar" />
         <activity android:name=".OBSV4Activity" />
-        <activity android:name=".ZXingActivity"></activity>
-        <activity android:name="zxingdemo.MipcaActivityCapture"
-            android:theme="@style/Theme.AppCompat.Light.DarkActionBar"/>
+        <activity android:name=".ZXingActivity" />
+        <activity
+            android:name="zxingdemo.MipcaActivityCapture"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+        <activity
+            android:name=".OpenZXingActivity"
+           />
     </application>
-    <!--相机权限-->
-    <uses-permission android:name="android.permission.VIBRATE" />
-    <uses-permission android:name="android.permission.CAMERA" />
-    <uses-feature android:name="android.hardware.camera" />
-    <uses-feature android:name="android.hardware.camera.autofocus" />
+
 </manifest>

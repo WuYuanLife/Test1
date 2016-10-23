@@ -10,12 +10,15 @@ import android.media.MediaPlayer.OnCompletionListener;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Vibrator;
+import android.util.Log;
 import android.view.SurfaceHolder;
 import android.view.SurfaceHolder.Callback;
 import android.view.SurfaceView;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.zxing.BarcodeFormat;
@@ -24,6 +27,7 @@ import com.google.zxing.Result;
 import java.io.IOException;
 import java.util.Vector;
 
+import cn.heyl.myim.OpenZXingActivity;
 import cn.heyl.myim.R;
 import zxing.camera.CameraManager;
 import zxing.decoding.CaptureActivityHandler;
@@ -49,14 +53,25 @@ public class MipcaActivityCapture extends Activity implements Callback {
     private boolean vibrate;
 
     /**
+     * 显示扫描结果
+     */
+    private TextView mTextView ;
+    /**
+     * 显示扫描拍的图片
+     */
+    private ImageView mImageView;
+
+    /**
      * Called when the activity is first created.
      */
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_capture);
-        //ViewUtil.addTopView(getApplicationContext(), this, R.string.scan_card);
+//        ViewUtil.addTopView(getApplicationContext(), this, R.string.scan_card);
         CameraManager.init(getApplication());
+//        mTextView = (TextView) findViewById(R.id.result);
+//        mImageView = (ImageView) findViewById(R.id.qrcode_bitmap);
         viewfinderView = (ViewfinderView) findViewById(R.id.viewfinder_view);
 
         Button mButtonBack = (Button) findViewById(R.id.button_back);
@@ -123,14 +138,24 @@ public class MipcaActivityCapture extends Activity implements Callback {
         playBeepSoundAndVibrate();
         String resultString = result.getText();
         if (resultString.equals("")) {
-            Toast.makeText(MipcaActivityCapture.this, "Scan failed!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(MipcaActivityCapture.this, "扫描失败！", Toast.LENGTH_SHORT).show();
         } else {
-            Intent resultIntent = new Intent();
+            Intent intent=new Intent(this, OpenZXingActivity.class);
+//            //显示扫描到的内容
+//            mTextView.setText(resultString);
+//            //显示
+//            mImageView.setImageBitmap(barcode);
+//            Intent resultIntent = new Intent();
             Bundle bundle = new Bundle();
             bundle.putString("result", resultString);
             bundle.putParcelable("bitmap", barcode);
-            resultIntent.putExtras(bundle);
-            this.setResult(RESULT_OK, resultIntent);
+//            intent.putExtra("R",bundle);
+//            resultIntent.putExtras(bundle);
+//            this.setResult(RESULT_OK, resultIntent);
+            intent.putExtras(bundle);
+            Log.d("hyl", "handleDecode: ");
+            startActivity(intent);
+
         }
         MipcaActivityCapture.this.finish();
     }

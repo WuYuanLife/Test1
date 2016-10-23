@@ -56,8 +56,9 @@ public class ZXingActivity extends AppCompatActivity {
                 public void onClick(View v) {
                     Intent intent = new Intent();
                     intent.setClass(ZXingActivity.this, MipcaActivityCapture.class);
-                    intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                    startActivityForResult(intent, SCANNIN_GREQUEST_CODE);
+                    startActivity(intent);
+//                    intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+//                    startActivityForResult(intent, SCANNIN_GREQUEST_CODE);
                 }
             });
 

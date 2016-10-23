@@ -1,29 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    android:background="@drawable/mmtitle_bg_alpha" >
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".OpenZXingActivity">
 
-    <Button
-        android:id="@+id/button_back"
-        android:layout_width="75.0dip"
-        android:text="返回"
-        android:background="@drawable/mm_title_back_btn"
-        android:textColor="@android:color/white"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_marginLeft="2dip" />
+
+    <ImageView
+        android:id="@+id/qrcode_bitmap"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" />
 
     <TextView
-        android:id="@+id/textview_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/button_back"
-        android:layout_alignBottom="@+id/button_back"
-        android:layout_centerHorizontal="true"
-        android:gravity="center_vertical"
-        android:text="二维码扫描"
-        android:textColor="@android:color/white"
-        android:textSize="18sp" />
+        android:id="@+id/result"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_height="100dp"
+        android:lines="3"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:layout_below="@+id/qrcode_bitmap"/>
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:gravity="center"
+        android:text="扫 描 结 果"
+        android:background="#fe3333"
+        android:textColor="@android:color/white"
+        android:textSize="22sp"
+        android:id="@+id/textView"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
 </RelativeLayout>
