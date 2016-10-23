@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright 2014 Soichiro Kashima
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:id="@+id/rlTitle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/flexible_space_image_height"
+        android:background="#edde0c" >
+
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:textColor="#fff"
+            android:textSize="20sp"
+            android:text="个 人 中 心" />
+
+        <cn.heyl.myim.CircleImageView
+            android:id="@+id/civTouxiang"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_below="@+id/textView1"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/a011" />
+
+    </RelativeLayout>
+
+    <!--<ImageView-->
+        <!--android:id="@+id/image"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="@dimen/flexible_space_image_height"-->
+        <!--android:scaleType="centerCrop"-->
+        <!--android:src="@mipmap/ic_pic" />-->
+
+    <View
+        android:id="@+id/overlay"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/flexible_space_image_height"
+        android:background="?attr/colorPrimary" />
+
+    <obsrcollview.ObservableScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/flexible_space_image_height"
+                android:background="@android:color/transparent" />
+
+
+            <RelativeLayout
+                android:id="@+id/rlShoucang"
+                android:layout_width="match_parent"
+                android:layout_height="52dp" >
+
+                <ImageView
+                    android:id="@+id/ivShoucang"
+                    android:layout_width="66dp"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/mine_ico_shoucang" />
+
+                <TextView
+                    android:id="@+id/tvShoucang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="49dp"
+                    android:layout_toRightOf="@+id/ivShoucang"
+                    android:gravity="center_vertical"
+                    android:text="我 收 藏 的 商 品"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="#333"
+                    android:textSize="14sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_alignLeft="@+id/tvShoucang"
+                    android:layout_below="@+id/tvShoucang"
+                    android:orientation="vertical"
+                    android:paddingRight="30dp" >
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#ddfa69b7" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1.5dp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#fa69b7" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlAddress"
+                android:layout_width="match_parent"
+                android:layout_height="52dp" >
+
+                <ImageView
+                    android:id="@+id/ivAddress"
+                    android:layout_width="66dp"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/mine_ico_address" />
+
+                <TextView
+                    android:id="@+id/tvAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="49dp"
+                    android:layout_toRightOf="@+id/ivAddress"
+                    android:gravity="center_vertical"
+                    android:text="我 的 地 址 管 理"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="#333"
+                    android:textSize="14sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_alignLeft="@+id/tvAddress"
+                    android:layout_below="@+id/tvAddress"
+                    android:orientation="vertical"
+                    android:paddingRight="30dp" >
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#ddfa69b7" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1.5dp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#fa69b7" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlOrder"
+                android:layout_width="match_parent"
+                android:layout_height="52dp" >
+
+                <ImageView
+                    android:id="@+id/ivOrder"
+                    android:layout_width="66dp"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/mine_ico_order" />
+
+                <TextView
+                    android:id="@+id/tvOrder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="49dp"
+                    android:layout_toRightOf="@+id/ivOrder"
+                    android:gravity="center_vertical"
+                    android:text="我 的 订 单"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="#333"
+                    android:textSize="14sp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_alignLeft="@+id/tvOrder"
+                    android:layout_below="@+id/tvOrder"
+                    android:orientation="vertical"
+                    android:paddingRight="30dp" >
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#ddfa69b7" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1.5dp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#fa69b7" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlSettings"
+                android:layout_width="match_parent"
+                android:layout_height="52dp" >
+
+                <ImageView
+                    android:id="@+id/ivSettings"
+                    android:layout_width="66dp"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/mine_ico_settings" />
+
+                <TextView
+                    android:id="@+id/tvSettings"
+                    android:layout_width="wrap_content"
+                    android:layout_height="49dp"
+                    android:layout_toRightOf="@+id/ivSettings"
+                    android:gravity="center_vertical"
+                    android:text="设 置"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="#333"
+                    android:textSize="14sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_alignLeft="@+id/tvSettings"
+                    android:layout_below="@+id/tvSettings"
+                    android:orientation="vertical"
+                    android:paddingRight="30dp" >
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#ddfa69b7" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1.5dp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#fa69b7" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlExit"
+                android:layout_width="match_parent"
+                android:layout_height="52dp" >
+
+                <ImageView
+                    android:id="@+id/ivExit"
+                    android:layout_width="66dp"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/mine_ico_exit" />
+
+                <TextView
+                    android:id="@+id/tvExit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="49dp"
+                    android:layout_toRightOf="@+id/ivExit"
+                    android:gravity="center_vertical"
+                    android:text="退 出"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="#333"
+                    android:textSize="14sp" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_alignLeft="@+id/tvExit"
+                    android:layout_below="@+id/tvExit"
+                    android:orientation="vertical"
+                    android:paddingRight="30dp" >
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#ddfa69b7" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1.5dp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#fa69b7" />
+                </LinearLayout>
+            </RelativeLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:text="@string/desc" />
+        </LinearLayout>
+
+    </obsrcollview.ObservableScrollView>
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        app:popupTheme="@style/Theme.AppCompat.Light.DarkActionBar"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:minHeight="?attr/actionBarSize"
+            android:textColor="@android:color/white"
+            android:text=" 请 登 录"
+            android:paddingLeft="@dimen/activity_vertical_margin"
+            android:textSize="20sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/flexible_space_image_height"
+            android:background="@null" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/rlTitle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/flexible_space_image_height"
+        android:background="#fa3333" >
+
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:textColor="#fff"
+            android:textSize="20sp"
+            android:text="个 人 中 心" />
+
+        <cn.heyl.myim.CircleImageView
+            android:id="@+id/civTouxiang"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_below="@+id/textView1"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/a011" />
+        <!--<TextView-->
+        <!--android:id="@+id/tvName_mine"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="48dp"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_below="@+id/civTouxiang"-->
+        <!--android:gravity="center"-->
+        <!--android:textColor="#fff"-->
+        <!--android:textSize="16sp"-->
+        <!--android:text="请 登 录" />-->
+    </RelativeLayout>
+
+    <!--<ImageView-->
+    <!--android:id="@+id/image"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="@dimen/flexible_space_image_height"-->
+    <!--android:scaleType="centerCrop"-->
+    <!--android:src="@mipmap/ic_pic" />-->
+
+    <View
+        android:id="@+id/overlay"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/flexible_space_image_height"
+        android:background="?attr/colorPrimary" />
+<!--<TextView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="210dp" />-->
+</RelativeLayout>

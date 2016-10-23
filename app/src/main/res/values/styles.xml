@@ -9,7 +9,8 @@
     </style>
     <style name="AppTheme.Toolbar" parent="Theme.AppCompat.Light.NoActionBar">
     <item name="colorPrimary">@color/primary</item>
-    <item name="colorPrimaryDark">@color/primaryDark</item>
+    <item name="colorPrimaryDark">@color/primary</item>
     <item name="colorAccent">@color/accent</item>
     </style>
+
 </resources>

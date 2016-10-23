@@ -7,7 +7,7 @@ android {
     defaultConfig {
         applicationId "cn.heyl.myim"
         minSdkVersion 17
-        targetSdkVersion 24
+        targetSdkVersion 23
         versionCode 1
         versionName "1.0"
     }
@@ -34,4 +34,6 @@ dependencies {
     compile 'com.google.android.gms:play-services-appindexing:8.1.0'
     compile 'com.manolovn:trianglify:1.1.0'
     compile 'com.manolovn:colorbrewer:1.0.1'
+    compile 'junit:junit:4.12'
+    compile files('libs/zxing.jar')
 }

@@ -47,8 +47,11 @@ public class OpenActivity extends AppCompatActivity {
                     case 2:intent=new Intent(OpenActivity.this,DownMentActivity.class);break;
                     case 3:intent=new Intent(OpenActivity.this,OBSrcollviewActivity.class);break;
                     case 4:intent=new Intent(OpenActivity.this,OBSV2Activity.class);break;
-                    case 5:openDiaLog();return;
-                    case 6:intent=new Intent(OpenActivity.this,TriangLifyActivity.class);break;
+                    case 5:intent=new Intent(OpenActivity.this,OBSV3Activity.class);break;
+                    case 6:intent=new Intent(OpenActivity.this,OBSV4Activity.class);break;
+                    case 7:openDiaLog();return;
+                    case 8:intent=new Intent(OpenActivity.this,TriangLifyActivity.class);break;
+                    case 9:intent=new Intent(OpenActivity.this,ZXingActivity.class);break;
                 }
                 startActivity(intent);
             }
@@ -107,8 +110,11 @@ AlertDialog.Builder builder = new AlertDialog.Builder(this);
         list.add("下拉筛选");
         list.add("标题图片拉隐藏");
         list.add("标题栏下拉隐藏");
+        list.add("标题布局拉隐藏");
+        list.add("标题ListView下拉隐藏");
         list.add("爆炸DiaLog");
         list.add("三角形视图背景");
+        list.add("二维码");
 
     }
 

@@ -22,8 +22,14 @@
     <color name="un_press_color">#9C27B0</color>
 
     <!--OBSV-->
-    <color name="primary">#009688</color>
+    <!--<color name="primary">#009688</color>-->
+    <color name="primary">#fe3333</color>
     <color name="primaryDark">#00796b</color>
     <color name="accent">#eeff41</color>
     <color name="accentLight">#F4FF81</color>
+
+    <!--ZXing-->
+    <color name="result_view">#b0000000</color>
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="possible_result_points">#c0ffff00</color>
 </resources>
