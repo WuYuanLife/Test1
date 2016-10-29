@@ -52,6 +52,7 @@ public class OpenActivity extends AppCompatActivity {
                     case 7:openDiaLog();return;
                     case 8:intent=new Intent(OpenActivity.this,TriangLifyActivity.class);break;
                     case 9:intent=new Intent(OpenActivity.this,ZXingActivity.class);break;
+                    case 10:intent=new Intent(OpenActivity.this,Login3Activity.class);break;
                 }
                 startActivity(intent);
             }
@@ -115,6 +116,7 @@ AlertDialog.Builder builder = new AlertDialog.Builder(this);
         list.add("爆炸DiaLog");
         list.add("三角形视图背景");
         list.add("二维码");
+        list.add("第三方登录");
 
     }
 
